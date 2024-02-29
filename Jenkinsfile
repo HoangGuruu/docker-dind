@@ -11,6 +11,7 @@ pipeline {
             steps {
                 sh "docker ps"
                 sh "docker build --network=host -t myapp ."
+                sh "docker ps"
             }
         }
     }
