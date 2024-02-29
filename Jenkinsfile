@@ -10,7 +10,7 @@ pipeline {
         stage("Build and Push to ACR") {
             steps {
                 sh "docker ps"
-                sh "docker build -t myapp ."
+                sh "docker build --network-host -t myapp ."
             }
         }
     }
